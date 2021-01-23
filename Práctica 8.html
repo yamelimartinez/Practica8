@@ -1,0 +1,567 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Práctica 8</title> 
+        <meta charset="utf-8">
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style type="text/css">
+            #footer {
+                background: whitesmoke;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+                #footer p {
+                    margin: 0;
+                }
+            #logo {
+                float: left;
+                padding: 0px 0 0 20px;
+                text-decoration: none;
+            }
+                #logo:hover {
+                    color:turquoise;
+                }
+            
+                #logo .name {
+                    display: block;
+                    font-weight: 700;
+                    font-size: 1.5em;
+                }
+            nav {
+                float: right;
+            }
+                nav ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    padding-right: 20px;
+                }
+                    nav ul li {
+                        display: inline-block;
+                        line-height: 80px;
+                    }
+                        nav ul li a {
+                            display: block;
+                            padding: 0 10px;
+                            text-decoration: none;
+                        }
+                            nav ul li a:hover {
+                                background-color: turquoise;
+                            }
+            body {
+                margin: 0;
+                padding: 0;
+                background: #f2f2f2; 
+                padding-top: 80px;
+            }
+            #header {
+                background: whitesmoke;
+                height: 80px;
+                width: 100%;
+                left: 0;
+                top: 0;
+                position: fixed;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+                @media only screen and (max-width: 590px){
+                    #header {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+        </style>
+    </head> 
+    <body> 
+        <header id="header">
+            <a id="logo" href="#">
+                <span class="name">Bootstrap 4</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Acerca de</a></li>
+                    <li><a href="#">Discusión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>table : iluminar la fila donde se encuentra el mouse (hover)</h1>
+            <p>Si queremos que se muestre la fila donde se encuentra el mouse con un color distinto debemos agregar la clase "table-hover".</p>
+            <p>Un ejemplo para probar esta clase:</p>
+            <p>El resultado cuando ejecutemos este código en el navegador es:</p>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Elemento 1,1</td>
+                        <td>Elemento 1,2</td>
+                        <td>Elemento 1,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 2,1</td>
+                        <td>Elemento 2,2</td>
+                        <td>Elemento 2,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 3,1</td>
+                        <td>Elemento 3,2</td>
+                        <td>Elemento 3,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 4,1</td>
+                        <td>Elemento 4,2</td>
+                        <td>Elemento 4,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 5,1</td>
+                        <td>Elemento 5,2</td>
+                        <td>Elemento 5,3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>table : tabla condensada</h1>
+                <p>Si tenemos que mostrar grandes tablas con datos puede ser necesario mostrar más información al mismo tiempo por pantalla condensando los datos (son los mismos datos pero más comprimidos en pantalla)</p>
+                <p>Esto se logra agregando la clase "table-sm" a la marca HTML "table".</p>
+                <p>Veamos un ejemplo con una tabla común y una tabla condensada:</p>
+                <table class="table">
+                    <thead>
+                        <tr> 
+                            <th>Titulo 1</th> 
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                        </tr> 
+                    </thead>
+                    <tr> 
+                        <td>Elemento 1,1</td>
+                        <td>Elemento 1,2</td> 
+                        <td>Elemento 1,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 2,1</td>
+                        <td>Elemento 2,2</td> 
+                        <td>Elemento 2,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 3,1</td>
+                        <td>Elemento 3,2</td> 
+                        <td>Elemento 3,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 4,1</td>
+                        <td>Elemento 4,2</td> 
+                        <td>Elemento 4,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 5,1</td>
+                        <td>Elemento 5,2</td> 
+                        <td>Elemento 5,3</td> 
+                    </tr>
+                </table>
+                <table class="table table-sm">
+                    <thead> 
+                        <tr> 
+                            <th>Titulo 1</th> 
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                        </tr> 
+                    </thead>
+                    <tr> 
+                        <td>Elemento 1,1</td>
+                        <td>Elemento 1,2</td> 
+                        <td>Elemento 1,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 2,1</td>
+                        <td>Elemento 2,2</td> 
+                        <td>Elemento 2,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 3,1</td>
+                        <td>Elemento 3,2</td> 
+                        <td>Elemento 3,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 4,1</td>
+                        <td>Elemento 4,2</td> 
+                        <td>Elemento 4,3</td> 
+                    </tr>
+                    <tr> 
+                        <td>Elemento 5,1</td>
+                        <td>Elemento 5,2</td> 
+                        <td>Elemento 5,3</td> 
+                    </tr>
+                </table>
+                <p>A la tabla que queremos condensar debemos agregarle la clase "table-sm".</p>
+                <p>Podemos ver la diferencia entre una tabla por defecto y una condensada.</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>table: definición de un estilo a la cabecera de la tabla</h1>
+                <p>Disponemos las clases "thead-light" y ".thead-dark" para aplicar a la etiqueta "thead" de una tabla.</p>
+                <p>Un ejemplo de empleo de estas clases:</p>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Titulo 1</th>
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Elemento 1,1</td>
+                        <td>Elemento 1,2</td>
+                        <td>Elemento 1,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 2,1</td>
+                        <td>Elemento 2,2</td>
+                        <td>Elemento 2,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 3,1</td>
+                        <td>Elemento 3,2</td>
+                        <td>Elemento 3,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 4,1</td>
+                        <td>Elemento 4,2</td>
+                        <td>Elemento 4,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 5,1</td>
+                        <td>Elemento 5,2</td>
+                        <td>Elemento 5,3</td>
+                    </tr>
+                    </table>
+                    <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Titulo 1</th>
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Elemento 1,1</td>
+                        <td>Elemento 1,2</td>
+                        <td>Elemento 1,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 2,1</td>
+                        <td>Elemento 2,2</td>
+                        <td>Elemento 2,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 3,1</td>
+                        <td>Elemento 3,2</td>
+                        <td>Elemento 3,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 4,1</td>
+                        <td>Elemento 4,2</td>
+                        <td>Elemento 4,3</td>
+                    </tr>
+                    <tr>
+                        <td>Elemento 5,1</td>
+                        <td>Elemento 5,2</td>
+                        <td>Elemento 5,3</td>
+                    </tr>
+                </table>
+                <p>En la primer tabla aplicamos la clase "thead-light" a la etiqueta "thead".</p>
+                <p>En la segunda tabla aplicamos la clase "thead-dark" a la etiqueta "thead".</p>
+                <p>Podemos ver la diferencias que tienen en la cabecera cada tabla.</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>table : clases contextuales aplicadas a filas y celdas</h1>
+                <p>Bootstrap dispone de 9 clases que a través de colores intentan transmitir un estado, por ejemplo peligro, cuidado, éxito etc.</p>
+                <p>Podemos aplicar estas clases contextuales a los colores de fondo de una fila o celda de una tabla.</p>
+                <p>Las 10 clases son:</p>
+                <ul>
+                    <li>table-danger (Representa una acción peligrosa)</li>
+                    <li>table-warning (Representa una advertencia)</li>
+                    <li>table-info (Representa una información)</li>
+                    <li>table-success (Representa algo exitoso)</li>
+                    <li>table-primary (Representa algo importante)</li>
+                    <li>table-secondary (Representa algo no tan importante)</li>
+                    <li>table-dark</li>
+                    <li>table-light</li>
+                    <li>table-active</li>
+                </ul>
+                <p>Veamos una tabla asignando estas clases a filas y celdas de una tabla:</p>
+                <p>Luego tenemos como resultado colores distintos en cada fila y la última fila las celdas con distintos colores:</p>
+                <table class="table">
+                    <thead> 
+                        <tr>
+                            <th>Titulo 1</th>
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-danger">
+                            <td>Elemento 1,1<br> (table-danger)</td>
+                            <td>Elemento 1,2</td>
+                            <td>Elemento 1,3</td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td>Elemento 2,1<br> (table-warning)</td>
+                            <td>Elemento 2,2</td>
+                            <td>Elemento 2,3</td>
+                        </tr>
+                        <tr class="table-info">
+                            <td>Elemento 3,1 <br> (table-info)</td>
+                            <td>Elemento 3,2</td>
+                            <td>Elemento 3,3</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>Elemento 4,1<br>(table-success)</td>
+                            <td>Elemento 4,2</td>
+                            <td>Elemento 4,3</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <td>Elemento 5,1<br>(table-primary)</td>
+                            <td>Elemento 5,2</td>
+                            <td>Elemento 5,3</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Elemento 6,1<br>(table-secondary)</td>
+                            <td>Elemento 6,2</td>
+                            <td>Elemento 6,3</td>
+                        </tr>
+                        <tr class="table-dark">
+                            <td>Elemento 7,1<br>(table-dark)</td>
+                            <td>Elemento 7,2</td>
+                            <td>Elemento 7,3</td>
+                        </tr>
+                        <tr class="table-light">
+                            <td>Elemento 8,1<br>(table-light)</td>
+                            <td>Elemento 8,2</td>
+                            <td>Elemento 8,3</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td>Elemento 9,1<br>(table-active)</td>
+                            <td>Elemento 9,2</td>
+                            <td>Elemento 9,3</td>
+                        </tr>
+                        <tr>
+                            <td class="table-danger">Elemento 10,1</td>
+                            <td class="table-warning">Elemento 10,2</td>
+                            <td class="table-info">Elemento 10,3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>La idea de utilizar estas clases es ser consistente en nuestro sitio cuando indicamos: peligro, cuidado, éxito etc. y si además utilizamos los que propone Bootstrap muchos sitios de internet serán consistentes con este juego de colores y el usuario comprenderá más rápido la dinámica del sitio web.</p>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h1>table : adaptable o responsive</h1>
+                <p>Cuando tenemos tablas con muchas columnas y dependiendo del tamaño del dispositivo podemos hacer que aparezca una barro de desplazamiento en la parte inferior de la tabla.</p>
+                <p>Esta característica la resuelve Bootstrap 4 mediante las clases:</p>
+                <ul>
+                    <li>table-responsive</li>
+                    <li>table-responsive-sm</li>
+                    <li>table-responsive-md</li>
+                    <li>table-responsive-lg</li>
+                    <li>table-responsive-xl</li>
+                </ul>
+                <p>Con un ejemplo probemos esta funcionalidad:</p>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Titulo 1</th>
+                            <th>Titulo 2</th>
+                            <th>Titulo 3</th>
+                            <th>Titulo 4</th>
+                            <th>Titulo 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Elemento 1,1</td>
+                            <td>Elemento 1,2</td>
+                            <td>Elemento 1,3</td>
+                            <td>Elemento 1,4</td>
+                            <td>Elemento 1,5</td>
+                        </tr>
+                        <tr>
+                            <td>Elemento 2,1</td>
+                            <td>Elemento 2,2</td>
+                            <td>Elemento 2,3</td>
+                            <td>Elemento 2,4</td>
+                            <td>Elemento 2,5</td>
+                        </tr>
+                        <tr>
+                            <td>Elemento 3,1</td>
+                            <td>Elemento 3,2</td>
+                            <td>Elemento 3,3</td>
+                            <td>Elemento 3,4</td>
+                            <td>Elemento 3,5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Si reducimos el ancho del dispositivo cuando los datos de la tabla no entran podemos verificar que aparece una barra de desplazamiento horizontal en la parte inferior de la tabla</p>
+            </div> 
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>form : controles input (text, password, file)</h1>
+                <p>Bootstrap 4 requiere una serie de clases para la implementación de un formulario vertical.</p>
+                <p>Veamos la etiqueta input como es afectada por Bootstrap. Lo más común es encerrar el control input y label con un div que se inicializa con la clase "form-group".</p>
+                <p>Bootstrap utiliza el elemento HTML "button" para implementar los botones de envío de datos al servidor con la siguiente sintaxis: button type="submit" class="btn btn-default">Enviar</p>
+                <p>Implementemos un formulario de login utilizando Bootstrap 4:</p>
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="clave">Ingrese su clave:</label>
+                        <input type="password" class="form-control" id="clave" name="clave">
+                    </div>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+                <p>Como podemos ver los dos controles input ocupan el 100% del contenedor (recordemos que están pensado primero que se vean bien en un dispositivo móvil, luego podemos disponerlos en una columna de una fila y darle distintos tamaños según el ancho del dispositivo):</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>form : control textarea</h1>
+                <p>El control textarea es utilizado cuando tenemos que introducir varias líneas de texto y cuando utilizamos Bootstrap 4 tenemos que encerrarlo en un div con la clase "form-group", igual que para los controles input.</p>
+                <p>Podemos inicializar la propiedad rows del control HTML textarea indicando cuantas filas deben ser visibles.</p>
+                <p>Veamos un ejemplo utilizando este control HTML asociado con Bootstrap 4:</p>
+                <p>Luego en pantalla aparece de la siguiente forma cuando está seleccionado:</p>
+                <form>
+                    <div class="form-group">
+                        <label for="comentarios">Deje aquí sus comentarios</label>
+                        <textarea class="form-control" rows="5" id="comentarios" name="comentarios"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+                <p>No tiene efecto si inicializamos la propiedad cols en la marca textarea. Debemos resolver esto utilizando una fila ("row") y una columna que no ocupe todo el contenedor.</p>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="container">
+                <h1>form : controles checkbox y radio</h1>
+                <p>Veamos como trabajamos con otros dos controles muy usados en los formulario web como son los controles checkbox y radio.</p>
+                <p>Podemos hacer que los controles aparezcan uno debajo del otro o uno al lado del otro.</p>
+                <p>Debemos envolver en un div con la clase "form-check" y dentro definir el control "input" con la clase "form-check-input".</p>
+                <p>La etiqueta label que hace referencia al checkbox o radio debe iniciarse con la clase "form-check-label".</p>
+                <p>Si queremos que los checkbox o radio se muestren uno al lado de otro debemos agregar la clase "form-check-inline" al div contenedor</p>
+                <h3>Problema</h3>
+                <p>Confeccionar un formulario que muestre tres checkbox un debajo del otro, tres radio también uno debajo del otro, seguidamente tres checkbox uno al lado del otro (en la misma fila) y por último tres radio uno al lado del otro.</p>
+                <p>En el navegador tenemos como resultado:</p>
+                <h1>En distintas filas</h1>      
+                <form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox1" name="checkbox1">
+                        <label class="form-check-label" for="checkbox1">
+                            Opcion 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox2" name="checkbox2">
+                        <label class="form-check-label" for="checkbox2">
+                            Opcion 2
+                        </label>
+                    </div>        
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox3" name="checkbox3">
+                        <label class="form-check-label" for="checkbox3">
+                            Opcion 3
+                        </label>
+                    </div>        
+            
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="" id="radio1" name="grupo1">
+                        <label class="form-check-label" for="radio1">
+                            Opcion 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="" id="radio2" name="grupo1">
+                        <label class="form-check-label" for="radio2">
+                            Opcion 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="" id="radio3" name="grupo1">
+                        <label class="form-check-label" for="radio1">
+                            Opcion 3
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Enviar</button> 
+                </form>
+                <h1>En la misma fila</h1>      
+                <form>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox4" name="checkbox4">
+                        <label class="form-check-label" for="checkbox4">
+                            Opcion 1
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox5" name="checkbox5">
+                        <label class="form-check-label" for="checkbox5">
+                            Opcion 2
+                        </label>
+                    </div>        
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox3" name="checkbox6">
+                        <label class="form-check-label" for="checkbox6">
+                            Opcion 3
+                        </label>
+                    </div>        
+                    <br> 
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="" id="radio4" name="grupo2">
+                        <label class="form-check-label" for="radio4">
+                            Opcion 1
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="" id="radio5" name="grupo2">
+                        <label class="form-check-label" for="radio5">
+                            Opcion 2
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="" id="radio6" name="grupo2">
+                        <label class="form-check-label" for="radio6">
+                            Opcion 3
+                        </label>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <footer id="footer">
+            <p>&copy; 2021 <a href="#" target="_blank">Yameli Martínez</a></p>
+        </footer>
+    </body>
+</html>
